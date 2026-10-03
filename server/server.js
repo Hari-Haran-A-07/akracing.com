@@ -88,11 +88,16 @@ app.use(errorHandler);
 
 // Connect DB and Start Server
 connectDB().then(() => {
-  app.listen(PORT, () => {
-    console.log(`\n======================================================`);
-    console.log(`🏎️  AJITH KUMAR RACING (AKR) SERVER ONLINE`);
-    console.log(`📍 Port: http://localhost:${PORT}`);
-    console.log(`🏁 Positioning: RACING. PERFORMANCE. PRECISION.`);
-    console.log(`======================================================\n`);
-  });
+  if (process.env.NODE_ENV !== 'test') {
+    app.listen(PORT, () => {
+      console.log(`\n======================================================`);
+      console.log(`🏎️  AJITH KUMAR RACING (AKR) SERVER ONLINE`);
+      console.log(`📍 Port: http://localhost:${PORT}`);
+      console.log(`🏁 Positioning: RACING. PERFORMANCE. PRECISION.`);
+      console.log(`======================================================\n`);
+    });
+  }
 });
+
+export default app;
+
