@@ -97,7 +97,8 @@ app.use(errorHandler);
 // Connect DB & Start Server
 connectDB();
 
-if (process.env.NODE_ENV !== 'test') {
+const isDirectRun = process.argv[1] && (process.argv[1].endsWith('server.js') || process.argv[1].endsWith('server'));
+if (isDirectRun && process.env.NODE_ENV !== 'test' && !process.env.VERCEL) {
   app.listen(PORT, () => {
     console.log(`\n======================================================`);
     console.log(`🏎️  AJITH KUMAR RACING (AKR) SERVER ONLINE`);
