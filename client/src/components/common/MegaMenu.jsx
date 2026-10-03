@@ -27,7 +27,7 @@ export const MegaMenu = ({ category, onClose }) => {
       featured: {
         title: "The Racing Philosophy",
         tag: "DRIVER PROFILE",
-        image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=600&auto=format&fit=crop",
+        image: "/images/ajith-kumar-management.jpg",
         link: "/driver"
       },
       links: [

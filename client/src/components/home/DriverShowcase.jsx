@@ -25,7 +25,7 @@ export const DriverShowcase = ({ driver }) => {
         <div className="lg:col-span-5 relative">
           <div className="relative border border-white/10 bg-black overflow-hidden group shadow-2xl">
             <img
-              src={driver?.images?.racingSuit || "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1000&auto=format&fit=crop"}
+              src={driver?.images?.racingSuit || "/images/ajith-kumar-management.jpg"}
               alt="Ajith Kumar - Lead Driver"
               className="w-full h-[520px] object-cover filter contrast-115 grayscale group-hover:grayscale-0 transition-all duration-700"
             />

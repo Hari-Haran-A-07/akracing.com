@@ -28,6 +28,12 @@ import adminRoutes from './routes/adminRoutes.js';
 
 dotenv.config();
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -35,6 +41,8 @@ const PORT = process.env.PORT || 5000;
 app.use(helmet({
   crossOriginResourcePolicy: false,
 }));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/images', express.static(path.join(__dirname, 'public/images')));
 app.use(cors({
   origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
@@ -86,18 +94,20 @@ app.use('/api/admin', adminRoutes);
 // Error Handling
 app.use(errorHandler);
 
-// Connect DB and Start Server
-connectDB().then(() => {
-  if (process.env.NODE_ENV !== 'test') {
-    app.listen(PORT, () => {
-      console.log(`\n======================================================`);
-      console.log(`🏎️  AJITH KUMAR RACING (AKR) SERVER ONLINE`);
-      console.log(`📍 Port: http://localhost:${PORT}`);
-      console.log(`🏁 Positioning: RACING. PERFORMANCE. PRECISION.`);
-      console.log(`======================================================\n`);
-    });
-  }
-});
+// Connect DB
+connectDB();
+
+// Start standalone server only when run directly (not in serverless / import mode)
+const isDirectRun = process.argv[1] && (process.argv[1].endsWith('server.js') || process.argv[1].endsWith('server'));
+if (isDirectRun && !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`\n======================================================`);
+    console.log(`🏎️  AJITH KUMAR RACING (AKR) SERVER ONLINE`);
+    console.log(`📍 Port: http://localhost:${PORT}`);
+    console.log(`🏁 Positioning: RACING. PERFORMANCE. PRECISION.`);
+    console.log(`======================================================\n`);
+  });
+}
 
 export default app;
 

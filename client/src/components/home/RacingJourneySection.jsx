@@ -37,7 +37,7 @@ export const RacingJourneySection = () => {
       title: "COMPETITION HISTORY",
       subtitle: "TWO DECADES OF PEDIGREE",
       description: "From British Formula 3 podiums and FIA Formula 2 to international endurance victories, our heritage is forged in speed.",
-      image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop",
+      image: "/images/ajith-kumar-management.jpg",
       link: "/heritage",
       badge: "SINCE 2002"
     }

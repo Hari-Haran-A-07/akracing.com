@@ -27,8 +27,8 @@ export const initialData = {
       preferredSetup: "Sharp front-end bite with controlled trail-braking stability"
     },
     images: {
-      portrait: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1200&auto=format&fit=crop",
-      racingSuit: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1200&auto=format&fit=crop",
+      portrait: "/images/ajith-kumar-management.jpg",
+      racingSuit: "/images/ajith-kumar-management.jpg",
       helmet: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1200&auto=format&fit=crop",
       action: "https://images.unsplash.com/photo-1541348263662-e0c8de4259ba?q=80&w=1400&auto=format&fit=crop",
       cockpit: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop"
@@ -632,7 +632,7 @@ AKR utilizes military-grade wireless telemetry links transmitting 120 key channe
       role: "Lead Driver & Team Principal",
       department: "MANAGEMENT",
       bio: "Visionary founder of AKR with 20+ years of professional open-wheel and GT racing expertise.",
-      image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800&auto=format&fit=crop",
+      image: "/images/ajith-kumar-management.jpg",
       experienceYears: "22 Years",
       accolades: "Multiple International Podiums, British F3 National Class, 24H Series Winner",
       quote: "Discipline is the foundation. Speed is the outcome."

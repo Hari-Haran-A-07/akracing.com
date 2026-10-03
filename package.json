@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Ajith Kumar Racing (AKR) - Premium International Motorsport Platform",
   "private": true,
+  "type": "module",
   "workspaces": [
     "server",
     "client"
