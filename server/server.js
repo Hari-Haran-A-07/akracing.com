@@ -94,12 +94,10 @@ app.use('/api/admin', adminRoutes);
 // Error Handling
 app.use(errorHandler);
 
-// Connect DB
+// Connect DB & Start Server
 connectDB();
 
-// Start standalone server only when run directly (not in serverless / import mode)
-const isDirectRun = process.argv[1] && (process.argv[1].endsWith('server.js') || process.argv[1].endsWith('server'));
-if (isDirectRun && !process.env.VERCEL) {
+if (process.env.NODE_ENV !== 'test') {
   app.listen(PORT, () => {
     console.log(`\n======================================================`);
     console.log(`🏎️  AJITH KUMAR RACING (AKR) SERVER ONLINE`);
