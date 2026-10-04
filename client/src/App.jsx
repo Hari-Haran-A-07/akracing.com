@@ -65,6 +65,7 @@ function AppContent() {
           <Route path="/driver" element={<DriverPage />} />
           <Route path="/cars" element={<CarsPage />} />
           <Route path="/cars/:id" element={<CarDetailPage />} />
+          <Route path="/porsche-911-992" element={<CarDetailPage />} />
           <Route path="/championships" element={<ChampionshipsPage />} />
           <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/results" element={<ResultsPage />} />
