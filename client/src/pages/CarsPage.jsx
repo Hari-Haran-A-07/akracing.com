@@ -56,7 +56,7 @@ export const CarsPage = () => {
                   FLAGSHIP MACHINE
                 </span>
                 <h2 className="font-display text-3xl sm:text-4xl font-black uppercase text-white mt-1">
-                  AKR GT3-01 SPEC
+                  {cars[0].name || "AKR PORSCHE 911 GT3 CUP (#9)"}
                 </h2>
               </div>
               <Link

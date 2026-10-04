@@ -82,15 +82,164 @@ export const initialData = {
     ]
   },
 
+  drivers: [
+    {
+      id: "ajith-kumar",
+      name: "AJITH KUMAR",
+      number: "9",
+      nationality: "Indian",
+      team: "AJITH KUMAR RACING (AKR)",
+      role: "Lead Driver & Team Principal",
+      status: "Active - International GT Competition",
+      bio: "Ajith Kumar is one of India's most accomplished and dedicated international racing drivers. With a motorsport career spanning over two decades, from Formula Maruti and British Formula 3 to the FIA Formula Two Championship and modern international GT3 endurance racing, his relentless discipline and engineering intellect define the ethos of Ajith Kumar Racing.",
+      philosophy: "Motorsport is pure truth. The telemetry never lies. On the track, your discipline, mental composure, and technical synchronization with the machine are everything.",
+      stats: {
+        raceStarts: 74,
+        podiums: 18,
+        wins: 7,
+        polePositions: 5,
+        fastestLaps: 12,
+        championships: 2,
+        careerKm: "48,500+ KM",
+        maxGForce: "3.8 G"
+      },
+      specs: {
+        height: "178 cm",
+        weight: "74 kg",
+        bloodType: "O+",
+        homeCircuit: "Madras International Circuit / Dubai Autodrome",
+        preferredSetup: "Sharp front-end bite with controlled trail-braking stability"
+      },
+      images: {
+        portrait: "/images/ajith-kumar-management.jpg",
+        racingSuit: "/images/ajith-kumar-management.jpg",
+        helmet: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1200&auto=format&fit=crop",
+        action: "/images/akr-porsche-gt3-cup.jpg",
+        cockpit: "/images/akr-porsche-gt3-cup.jpg"
+      },
+      careerTimeline: [
+        {
+          year: "2002 - 2003",
+          period: "EARLY YEARS & FORMULA BMW",
+          category: "Formula BMW Asia",
+          circuit: "Sepang & Asian Circuits",
+          description: "Competed in the inaugural Formula BMW Asia championship, battling premier open-wheel prospects across the Asia-Pacific region.",
+          achievement: "Multiple top-6 finishes, consistent points scoring.",
+          image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          year: "2004",
+          period: "BRITISH FORMULA 3",
+          category: "British F3 Championship (National Class)",
+          circuit: "Donington Park, Knockhill & Silverstone",
+          description: "Raced for Scholarship Class in the prestigious British Formula 3 series against international factory drivers.",
+          achievement: "2 International Podiums (3rd at Donington Park & Knockhill).",
+          image: "https://images.unsplash.com/photo-1541348263662-e0c8de4259ba?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          year: "2010",
+          period: "FIA FORMULA TWO",
+          category: "FIA Formula Two Championship",
+          circuit: "Silverstone, Monza, Brands Hatch, Circuit de Spa",
+          description: "Represented India on the FIA world championship stage, piloting Williams-designed Formula 2 high-downforce single-seaters.",
+          achievement: "Consistent European finishes, 1:44 lap times at Silverstone.",
+          image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          year: "2024 - 2025",
+          period: "INTERNATIONAL GT & 24H ENDURANCE",
+          category: "24H Series / European GT & Creventic",
+          circuit: "Dubai Autodrome, Mugello, Circuit Paul Ricard, Barcelona",
+          description: "Established AJITH KUMAR RACING (AKR) as a premier international racing organization competing in GT3/GT4 endurance championships.",
+          achievement: "Podium finishes in 24H Series Middle East & European Championship.",
+          image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          year: "2026",
+          period: "GLOBAL ENDURANCE CAMPAIGN",
+          category: "Middle East & European GT Championship",
+          circuit: "Abu Dhabi, Dubai, Spa-Francorchamps, Monza",
+          description: "Leading AKR's flagship international endurance program with advanced telemetry and engineering operations.",
+          achievement: "Active Championship Contender.",
+          image: "/images/akr-porsche-gt3-cup.jpg"
+        }
+      ]
+    },
+    {
+      id: "cameron-mcleod",
+      name: "CAMERON MCLEOD",
+      number: "9",
+      nationality: "Australian",
+      team: "AJITH KUMAR RACING (AKR)",
+      role: "Pro Racing Driver & Co-Driver",
+      status: "Active - 24H Series & International GT3",
+      bio: "Cameron McLeod is a rapid Australian racing talent partnering with Ajith Kumar in international GT endurance championships. Known for searing qualifying pace, high-speed consistency across multi-hour stints, and exemplary car preservation in endurance battles.",
+      philosophy: "Endurance racing is pure trust. Trust in your teammate, trust in your pit crew, and relentless focus until the checkered flag.",
+      stats: {
+        raceStarts: 46,
+        podiums: 14,
+        wins: 6,
+        polePositions: 8,
+        fastestLaps: 9,
+        championships: 1,
+        careerKm: "28,000+ KM",
+        maxGForce: "3.7 G"
+      },
+      specs: {
+        height: "175 cm",
+        weight: "68 kg",
+        bloodType: "A+",
+        homeCircuit: "Queensland Raceway / Dubai Autodrome",
+        preferredSetup: "Aggressive turn-in responsiveness with balanced aero trim"
+      },
+      images: {
+        portrait: "/images/cameron-mcleod.jpg",
+        racingSuit: "/images/cameron-mcleod.jpg",
+        helmet: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1200&auto=format&fit=crop",
+        action: "/images/akr-porsche-gt3-cup.jpg",
+        cockpit: "/images/akr-porsche-gt3-cup.jpg"
+      },
+      careerTimeline: [
+        {
+          year: "2021 - 2022",
+          period: "AUSTRALIAN FORMULA FORD & SPRINT RACING",
+          category: "Formula Ford Championship",
+          circuit: "Sydney Motorsport Park, Sandown Raceway",
+          description: "Dominant junior open-wheel campaigns earning multiple pole positions and race wins through aggressive racecraft.",
+          achievement: "Championship Runner-up & Multiple Race Victories.",
+          image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          year: "2023 - 2024",
+          period: "SUPERCARS SUPER3 & INTERNATIONAL GT",
+          category: "Dunlop Super3 & International GT",
+          circuit: "Bathurst Mount Panorama, Wanneroo",
+          description: "Broke qualifying records and established reputation as one of the fastest emerging GT and touring car drivers.",
+          achievement: "Class Lap Record Holder & International Endurance Debut.",
+          image: "https://images.unsplash.com/photo-1541348263662-e0c8de4259ba?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          year: "2025 - 2026",
+          period: "24H SERIES & EUROPEAN GT WITH AKR",
+          category: "24H Series / European GT Championship",
+          circuit: "Circuit de Barcelona-Catalunya, Dubai, Mugello",
+          description: "Key driver in Ajith Kumar Racing's 24H Series campaign piloting the #9 Porsche 911 GT3 Cup in premier international endurance battles.",
+          achievement: "International GT3 Endurance Contender & Podium Finisher.",
+          image: "/images/akr-porsche-gt3-cup.jpg"
+        }
+      ]
+    }
+  ],
+
   cars: [
     {
       id: "akr-gt3-01",
-      name: "AKR GT3-01 SPEC",
-      modelCode: "AKR-GT3-EVO-2026",
-      class: "FIA GT3 Homologated / Endurance Cup",
+      name: "AKR PORSCHE 911 GT3 CUP (#9)",
+      modelCode: "992-GT3-CUP-2026",
+      class: "Porsche 911 GT3 Cup (Type 992) / 24H Series",
       season: "2026",
-      subtitle: "THE CARBON-FIBER BEAST ENGINEERED FOR 24-HOUR PRECISION",
-      description: "The AKR GT3-01 is the pinnacle of Ajith Kumar Racing's competitive stable. Built on an ultra-rigid carbon-composite monocoque with advanced aero-channeling, sequential 6-speed pneumatic paddle shift, and high-frequency Motec telemetry logging 120 parameters at 1000Hz.",
+      subtitle: "THE OFFICIAL AJITH KUMAR RACING COMPETITION WEAPON",
+      description: "The flagship competition machine of Ajith Kumar Racing. Built on the Porsche 911 GT3 Cup (Type 992) platform featuring custom Ajith Kumar Racing racing-red and championship-yellow livery, 4.0L naturally aspirated flat-six producing 510 BHP, pneumatic 6-speed sequential paddle shift, and high-frequency Motec telemetry logging across European endurance circuits.",
       specs: {
         engine: "4.0L Naturally Aspirated Flat-6 / High-Revving GT-Spec",
         power: "510 BHP @ 8,400 RPM",
@@ -104,12 +253,12 @@ export const initialData = {
         electronics: "Bosch Motorsport MS6 Engine Management & Multi-Level Traction Control"
       },
       images: {
-        hero: "https://images.unsplash.com/photo-1541348263662-e0c8de4259ba?q=80&w=1600&auto=format&fit=crop",
-        front: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1400&auto=format&fit=crop",
-        side: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1400&auto=format&fit=crop",
-        cockpit: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=1400&auto=format&fit=crop",
-        engine: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?q=80&w=1400&auto=format&fit=crop",
-        track: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1600&auto=format&fit=crop"
+        hero: "/images/akr-porsche-gt3-cup.jpg",
+        front: "/images/akr-porsche-gt3-cup.jpg",
+        side: "/images/akr-porsche-gt3-cup.jpg",
+        cockpit: "/images/akr-porsche-gt3-cup.jpg",
+        engine: "/images/akr-porsche-gt3-cup.jpg",
+        track: "/images/akr-porsche-gt3-cup.jpg"
       },
       hotspots: [
         {
@@ -559,6 +708,61 @@ AKR utilizes military-grade wireless telemetry links transmitting 120 key channe
   media: [
     {
       id: "med-01",
+      title: "AKR PORSCHE 911 GT3 CUP ON TRACK",
+      category: "CARS",
+      type: "photo",
+      url: "/images/akr-porsche-gt3-cup.jpg",
+      thumbnailUrl: "/images/akr-porsche-gt3-cup.jpg",
+      caption: "The official Ajith Kumar Racing Porsche 911 GT3 Cup attacking the curbs at Circuit de Barcelona-Catalunya.",
+      location: "Circuit de Barcelona-Catalunya",
+      date: "Sep 2026"
+    },
+    {
+      id: "med-02",
+      title: "CAMERON MCLEOD: DRIVER PROFILE",
+      category: "DRIVER",
+      type: "photo",
+      url: "/images/cameron-mcleod.jpg",
+      thumbnailUrl: "/images/cameron-mcleod.jpg",
+      caption: "Cameron McLeod in official Ajith Kumar Racing HRX race suit for 24H Series campaign.",
+      location: "Circuit de Barcelona-Catalunya",
+      date: "Sep 2026"
+    },
+    {
+      id: "med-03",
+      title: "SHIVA SWAMYNATH: TEAM MANAGER",
+      category: "TEAM",
+      type: "photo",
+      url: "/images/shiva-swamynath.jpg",
+      thumbnailUrl: "/images/shiva-swamynath.jpg",
+      caption: "Team Manager Shiva Swamynath directing paddock operations and logistics.",
+      location: "AKR Command Center",
+      date: "2026"
+    },
+    {
+      id: "med-04",
+      title: "SURESH CHANDRA: MARKETING & PUBLICATIONS",
+      category: "TEAM",
+      type: "photo",
+      url: "/images/suresh-chandra.jpg",
+      thumbnailUrl: "/images/suresh-chandra.jpg",
+      caption: "Head of Marketing & Publications Suresh Chandra leading international motorsport press relations.",
+      location: "AKR Media Center",
+      date: "2026"
+    },
+    {
+      id: "med-05",
+      title: "AJITH KUMAR: VISOR DOWN FOCUS",
+      category: "DRIVER",
+      type: "photo",
+      url: "/images/ajith-kumar-management.jpg",
+      thumbnailUrl: "/images/ajith-kumar-management.jpg",
+      caption: "Lead Driver & Team Principal Ajith Kumar ready on the grid.",
+      location: "Yas Marina Circuit",
+      date: "Feb 2026"
+    },
+    {
+      id: "med-06",
       title: "NIGHT ATTACK: 24H DUBAI MIDNIGHT STINT",
       category: "PHOTOS",
       type: "photo",
@@ -569,59 +773,15 @@ AKR utilizes military-grade wireless telemetry links transmitting 120 key channe
       date: "Jan 2026"
     },
     {
-      id: "med-02",
-      title: "AJITH KUMAR: VISOR DOWN FOCUS",
-      category: "DRIVER",
-      type: "photo",
-      url: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1600&auto=format&fit=crop",
-      thumbnailUrl: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=600&auto=format&fit=crop",
-      caption: "Total mental focus on the starting grid 5 minutes prior to race formation.",
-      location: "Yas Marina Circuit",
-      date: "Feb 2026"
-    },
-    {
-      id: "med-03",
-      title: "CHALLENGING THE APEX: AKR GT3-01 AT SPEED",
-      category: "CARS",
-      type: "photo",
-      url: "https://images.unsplash.com/photo-1541348263662-e0c8de4259ba?q=80&w=1600&auto=format&fit=crop",
-      thumbnailUrl: "https://images.unsplash.com/photo-1541348263662-e0c8de4259ba?q=80&w=600&auto=format&fit=crop",
-      caption: "High-speed aerodynamic balance through the technical chicane.",
-      location: "Autodromo del Mugello",
-      date: "Mar 2026"
-    },
-    {
-      id: "med-04",
-      title: "PIT-STOP CHOREOGRAPHY: 3.2 SECOND TIRE SWAP",
-      category: "TEAM",
-      type: "photo",
-      url: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop",
-      thumbnailUrl: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=600&auto=format&fit=crop",
-      caption: "The AKR pit crew executing precision fuel and tyre service in synchronized harmony.",
-      location: "Circuit de Spa",
-      date: "Apr 2026"
-    },
-    {
-      id: "med-05",
-      title: "CARBON ANATOMY: MONOCOQUE TEARDOWN",
-      category: "BEHIND THE SCENES",
-      type: "photo",
-      url: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?q=80&w=1600&auto=format&fit=crop",
-      thumbnailUrl: "https://images.unsplash.com/photo-1486006920555-c77dce18193b?q=80&w=600&auto=format&fit=crop",
-      caption: "Post-race diagnostic inspection of the rear subframe and titanium exhaust geometry.",
-      location: "AKR Technical Base",
-      date: "Mar 2026"
-    },
-    {
-      id: "med-06",
+      id: "med-07",
       title: "ONBOARD WITH AJITH KUMAR: 300 KM/H HOT LAP",
       category: "VIDEOS",
       type: "video",
       url: "https://assets.mixkit.co/videos/preview/mixkit-sports-car-racing-on-a-track-34676-large.mp4",
-      thumbnailUrl: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=600&auto=format&fit=crop",
+      thumbnailUrl: "/images/akr-porsche-gt3-cup.jpg",
       caption: "Full helmet-cam onboard telemetry capture chasing the qualifying lap record.",
-      location: "Spa-Francorchamps",
-      date: "Apr 2026"
+      location: "Circuit de Barcelona-Catalunya",
+      date: "Sep 2026"
     }
   ],
 
@@ -639,6 +799,39 @@ AKR utilizes military-grade wireless telemetry links transmitting 120 key channe
     },
     {
       id: "team-02",
+      name: "CAMERON MCLEOD",
+      role: "Professional Racing Driver",
+      department: "DRIVERS",
+      bio: "Elite international endurance racing driver competing alongside Ajith Kumar in the 24H Series with exceptional high-speed consistency and telemetry-backed racecraft.",
+      image: "/images/cameron-mcleod.jpg",
+      experienceYears: "8 Years",
+      accolades: "24H Series GT3 Driver, Super3 Lap Record Holder, Multi-Race Winner",
+      quote: "Endurance racing is about rhythm, trust in the car, and pushing every lap to the absolute limit."
+    },
+    {
+      id: "team-03",
+      name: "SHIVA SWAMYNATH",
+      role: "Team Manager & Operations Lead",
+      department: "MANAGEMENT",
+      bio: "Oversees global motorsport operations, paddock logistics, technical team coordination, and strategic administration for Ajith Kumar Racing across worldwide championship rounds.",
+      image: "/images/shiva-swamynath.jpg",
+      experienceYears: "15+ Years",
+      accolades: "International Motorsport Logistics & Team Operations Lead",
+      quote: "Flawless organization in the paddock is the backbone of victory on the track."
+    },
+    {
+      id: "team-04",
+      name: "SURESH CHANDRA",
+      role: "Head of Marketing & Publications",
+      department: "MARKETING",
+      bio: "Leads global marketing strategy, international publications, press relations, digital media, and brand communications for Ajith Kumar Racing worldwide.",
+      image: "/images/suresh-chandra.jpg",
+      experienceYears: "20+ Years",
+      accolades: "Chief of Motorsport Communications & Media Strategy",
+      quote: "Telling the authentic story of speed, engineering mastery, and Indian motorsport triumph to the world."
+    },
+    {
+      id: "team-05",
       name: "MARCUS VOGEL",
       role: "Chief Race Engineer & Technical Director",
       department: "ENGINEERING",
@@ -649,7 +842,7 @@ AKR utilizes military-grade wireless telemetry links transmitting 120 key channe
       quote: "We don't search for tenths in the corners; we engineer thousandths in the data."
     },
     {
-      id: "team-03",
+      id: "team-06",
       name: "ELENA ROSTOVA",
       role: "Head of Race Strategy & Data Telemetry",
       department: "STRATEGY",
@@ -660,7 +853,7 @@ AKR utilizes military-grade wireless telemetry links transmitting 120 key channe
       quote: "Every second in the pit lane counts triple on the track."
     },
     {
-      id: "team-04",
+      id: "team-07",
       name: "RAJESH SUNDARAM",
       role: "Chief Powertrain & Systems Specialist",
       department: "ENGINEERING",
@@ -671,7 +864,7 @@ AKR utilizes military-grade wireless telemetry links transmitting 120 key channe
       quote: "Engine reliability across 24 hours demands flawless thermal management."
     },
     {
-      id: "team-05",
+      id: "team-08",
       name: "DAVID MCDONALD",
       role: "Pit Crew Chief & Garage Coordinator",
       department: "PIT CREW",
@@ -682,7 +875,7 @@ AKR utilizes military-grade wireless telemetry links transmitting 120 key channe
       quote: "In the pit box, calm execution is faster than frantic haste."
     },
     {
-      id: "team-06",
+      id: "team-09",
       name: "VIKRAM NAIR",
       role: "Driver Performance & Physiotherapy Lead",
       department: "PERFORMANCE",

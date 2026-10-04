@@ -22,6 +22,14 @@ export const api = {
     const res = await fetch(`${API_BASE}/driver`);
     return res.json();
   },
+  getDrivers: async () => {
+    const res = await fetch(`${API_BASE}/driver/all`);
+    return res.json();
+  },
+  getDriverById: async (id) => {
+    const res = await fetch(`${API_BASE}/driver/${id}`);
+    return res.json();
+  },
   updateDriver: async (data) => {
     const res = await fetch(`${API_BASE}/driver`, {
       method: 'PUT',

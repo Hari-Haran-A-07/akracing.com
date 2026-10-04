@@ -43,8 +43,12 @@ export const MobileNav = ({ isOpen, onClose, onOpenSearch }) => {
         {/* Top Header */}
         <div className="flex items-center justify-between border-b border-white/10 pb-6">
           <Link to="/" onClick={onClose} className="flex items-center gap-3">
-            <div className="w-8 h-8 border border-racing-red rotate-45 flex items-center justify-center bg-black">
-              <span className="-rotate-45 font-display font-black text-xs">AKR</span>
+            <div className="h-9 flex items-center bg-white px-2 py-0.5 rounded border border-racing-red/50 shadow-md">
+              <img
+                src="/images/akr-logo.jpg"
+                alt="Ajith Kumar Racing Official Logo"
+                className="h-full w-auto object-contain"
+              />
             </div>
             <span className="font-display font-black text-lg tracking-wider">
               AJITH KUMAR <span className="text-racing-red">RACING</span>

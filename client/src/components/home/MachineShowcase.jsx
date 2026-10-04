@@ -29,7 +29,7 @@ export const MachineShowcase = ({ car }) => {
               THE <span className="text-racing-red">MACHINE</span>
             </h2>
             <p className="text-xs sm:text-sm font-mono text-racing-silver uppercase tracking-widest">
-              AKR GT3-01 &bull; CARBON-FIBER MONOCOQUE &bull; 24-HOUR PRECISION
+              AKR PORSCHE 911 GT3 CUP (#9) &bull; 24H SERIES HOMOLOGATED &bull; 510 BHP FLAT-6
             </p>
           </div>
 

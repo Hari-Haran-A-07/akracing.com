@@ -151,14 +151,23 @@ export const Footer = () => {
         </div>
       </div>
 
-      {/* Large Brand Typography */}
+      {/* Large Brand Typography & Official Logo */}
       <div className="max-w-7xl mx-auto px-6 sm:px-12 py-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div>
-          <div className="font-display text-4xl sm:text-6xl font-black uppercase tracking-tighter text-white">
-            AJITH KUMAR <span className="text-racing-red">RACING</span>
+        <div className="flex items-center gap-4">
+          <div className="h-14 sm:h-16 flex items-center bg-white px-3 py-1.5 rounded border border-racing-red/40 shadow-[0_0_20px_rgba(217,4,41,0.2)]">
+            <img
+              src="/images/akr-logo.jpg"
+              alt="Ajith Kumar Racing Official Logo"
+              className="h-full w-auto object-contain"
+            />
           </div>
-          <div className="text-[11px] font-mono tracking-[0.3em] text-racing-silver mt-1">
-            RACING. PERFORMANCE. PRECISION.
+          <div>
+            <div className="font-display text-2xl sm:text-4xl font-black uppercase tracking-tighter text-white">
+              AJITH KUMAR <span className="text-racing-red">RACING</span>
+            </div>
+            <div className="text-[11px] font-mono tracking-[0.3em] text-racing-silver mt-1">
+              RACING. PERFORMANCE. PRECISION.
+            </div>
           </div>
         </div>
 

@@ -116,16 +116,17 @@ export const CarViewer360 = ({ car }) => {
   // Pick car angle based on rotation angle (4 primary angles)
   const getCarImage = () => {
     const images = car?.images || {
-      hero: "https://images.unsplash.com/photo-1541348263662-e0c8de4259ba?q=80&w=1600&auto=format&fit=crop",
-      front: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1400&auto=format&fit=crop",
-      side: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1400&auto=format&fit=crop",
-      cockpit: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=1400&auto=format&fit=crop"
+      hero: "/images/akr-porsche-gt3-cup.jpg",
+      front: "/images/akr-porsche-gt3-cup.jpg",
+      side: "/images/akr-porsche-gt3-cup.jpg",
+      track: "/images/akr-porsche-gt3-cup.jpg",
+      cockpit: "/images/akr-porsche-gt3-cup.jpg"
     };
 
-    if (rotationAngle >= 315 || rotationAngle < 45) return images.front || images.hero;
-    if (rotationAngle >= 45 && rotationAngle < 135) return images.side || images.hero;
-    if (rotationAngle >= 135 && rotationAngle < 225) return images.hero;
-    return images.cockpit || images.hero;
+    if (rotationAngle >= 315 || rotationAngle < 45) return images.front || images.hero || "/images/akr-porsche-gt3-cup.jpg";
+    if (rotationAngle >= 45 && rotationAngle < 135) return images.side || images.hero || "/images/akr-porsche-gt3-cup.jpg";
+    if (rotationAngle >= 135 && rotationAngle < 225) return images.track || images.hero || "/images/akr-porsche-gt3-cup.jpg";
+    return images.cockpit || images.hero || "/images/akr-porsche-gt3-cup.jpg";
   };
 
   return (

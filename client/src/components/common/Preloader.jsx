@@ -108,15 +108,15 @@ export const Preloader = ({ onComplete }) => {
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="flex flex-col items-center"
             >
-              {/* Dynamic Badge */}
-              <div className="relative mb-4">
-                <div className="w-20 h-20 border border-racing-red/40 rotate-45 flex items-center justify-center bg-black/60 shadow-[0_0_30px_rgba(217,4,41,0.3)]">
-                  <span className="-rotate-45 font-display text-2xl font-black tracking-tighter text-white">
-                    AK<span className="text-racing-red">R</span>
-                  </span>
+              {/* Dynamic Official Logo Badge */}
+              <div className="relative mb-6">
+                <div className="p-4 bg-white rounded-lg border border-racing-red shadow-[0_0_40px_rgba(217,4,41,0.4)] flex items-center justify-center">
+                  <img
+                    src="/images/akr-logo.jpg"
+                    alt="Ajith Kumar Racing Official Logo"
+                    className="h-20 sm:h-28 w-auto object-contain"
+                  />
                 </div>
-                <div className="absolute -top-1 -right-1 w-2 h-2 bg-racing-red" />
-                <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-racing-red" />
               </div>
 
               <motion.h1

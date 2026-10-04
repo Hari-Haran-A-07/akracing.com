@@ -103,17 +103,19 @@ export const Navbar = () => {
             onClick={playClick}
             className="flex items-center gap-3.5 group relative"
           >
-            <div className="w-9 h-9 border border-racing-red/60 group-hover:border-racing-red rotate-45 flex items-center justify-center bg-black transition-transform duration-300 group-hover:scale-105 shadow-[0_0_15px_rgba(217,4,41,0.25)]">
-              <span className="-rotate-45 font-display font-black text-sm tracking-tighter text-white">
-                AK<span className="text-racing-red">R</span>
-              </span>
+            <div className="h-10 sm:h-11 flex items-center bg-white px-2 py-1 rounded border border-racing-red/40 group-hover:border-racing-red transition-all duration-300 shadow-[0_0_15px_rgba(217,4,41,0.25)]">
+              <img
+                src="/images/akr-logo.jpg"
+                alt="Ajith Kumar Racing Official Logo"
+                className="h-full w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-display font-black text-lg sm:text-xl tracking-tight text-white uppercase group-hover:text-racing-red transition-colors leading-none">
                 AJITH KUMAR <span className="text-racing-red">RACING</span>
               </span>
               <span className="text-[9px] font-mono tracking-[0.25em] text-racing-silver uppercase">
-                MOTORSPORT ORGANIZATION
+                OFFICIAL MOTORSPORT PLATFORM
               </span>
             </div>
           </Link>

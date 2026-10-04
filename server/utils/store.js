@@ -4,6 +4,7 @@ import { initialData } from '../seed/seedData.js';
 class DataStore {
   constructor() {
     this.driver = { ...initialData.driver };
+    this.drivers = [...(initialData.drivers || [initialData.driver])];
     this.cars = [...initialData.cars];
     this.championships = [...initialData.championships];
     this.races = [...initialData.races];
@@ -51,7 +52,13 @@ class DataStore {
   }
 
   findById(collection, id) {
-    if (collection === 'driver') return this.driver;
+    if (collection === 'driver') {
+      if (id && this.drivers) {
+        const found = this.drivers.find(d => d.id === id);
+        if (found) return found;
+      }
+      return this.driver;
+    }
     if (collection === 'telemetry') return this.telemetry;
     const items = this[collection];
     if (!Array.isArray(items)) return null;

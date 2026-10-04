@@ -26,7 +26,9 @@ export const TeamPage = () => {
 
   const filtered = team.filter((member) => {
     if (deptFilter === 'ALL') return true;
-    return member.department.toUpperCase() === deptFilter.toUpperCase();
+    const memberDept = (member.department || '').toUpperCase();
+    const filter = deptFilter.toUpperCase();
+    return memberDept === filter || memberDept.includes(filter);
   });
 
   return (
@@ -45,7 +47,7 @@ export const TeamPage = () => {
             THE <span className="text-racing-red">TEAM</span>
           </h1>
           <p className="text-xs sm:text-sm font-mono text-racing-silver uppercase tracking-widest max-w-2xl">
-            LEADERSHIP, CHIEF RACE ENGINEERS, STRATEGISTS, PIT CREW & PERFORMANCE SCIENTISTS
+            LEADERSHIP, PRO DRIVERS, MANAGEMENT, MARKETING, RACE ENGINEERS & STRATEGISTS
           </p>
         </div>
       </section>
@@ -53,7 +55,7 @@ export const TeamPage = () => {
       {/* Filter Department Ribbon */}
       <section className="py-6 px-6 sm:px-12 bg-racing-graphite border-b border-racing-border">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center gap-2">
-          {['ALL', 'MANAGEMENT', 'ENGINEERING', 'STRATEGY', 'PIT CREW', 'PERFORMANCE'].map((dept) => (
+          {['ALL', 'MANAGEMENT', 'DRIVERS', 'MARKETING', 'ENGINEERING', 'STRATEGY', 'PIT CREW', 'PERFORMANCE'].map((dept) => (
             <button
               key={dept}
               onClick={() => setDeptFilter(dept)}
