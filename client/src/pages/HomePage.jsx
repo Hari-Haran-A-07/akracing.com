@@ -1,21 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { api } from '../services/api';
 import { Preloader } from '../components/common/Preloader';
+
+// Homepage Sections
 import { HeroSection } from '../components/home/HeroSection';
-import { RacingJourneySection } from '../components/home/RacingJourneySection';
+import { IntroMissionSection } from '../components/home/IntroMissionSection';
+import { UpcomingRaceHighlight } from '../components/home/UpcomingRaceHighlight';
+import { KeyStrengthsSection } from '../components/home/KeyStrengthsSection';
+import { CollaborationsSection } from '../components/home/CollaborationsSection';
 import { DriverShowcase } from '../components/home/DriverShowcase';
 import { MachineShowcase } from '../components/home/MachineShowcase';
 import { CarBlueprintSection } from '../components/home/CarBlueprintSection';
 import { ChampionshipsSection } from '../components/home/ChampionshipsSection';
+import { RacingJourneySection } from '../components/home/RacingJourneySection';
 import { RaceCalendarSection } from '../components/home/RaceCalendarSection';
 import { ResultsSection } from '../components/home/ResultsSection';
 import { LiveRaceSimulator } from '../components/home/LiveRaceSimulator';
 import { TechnologySection } from '../components/home/TechnologySection';
+import { MerchandiseShowcase } from '../components/home/MerchandiseShowcase';
 import { LatestNewsSection } from '../components/home/LatestNewsSection';
 import { MagazineStoriesSection } from '../components/home/MagazineStoriesSection';
 import { MediaShowcase } from '../components/home/MediaShowcase';
 import { TeamSection } from '../components/home/TeamSection';
 import { PartnersSection } from '../components/home/PartnersSection';
+import { BecomePartnerCTA } from '../components/home/BecomePartnerCTA';
+import { ContactSection } from '../components/home/ContactSection';
 import { ExperiencesSection } from '../components/home/ExperiencesSection';
 
 export const HomePage = () => {
@@ -94,57 +103,78 @@ export const HomePage = () => {
   }, []);
 
   return (
-    <div className="relative w-full bg-racing-black overflow-hidden">
-      {/* Cinematic Intro Preloader */}
+    <div className="relative w-full bg-racing-black overflow-hidden selection:bg-racing-red selection:text-white">
+      {/* 01. Cinematic Intro Preloader */}
       {showPreloader && <Preloader onComplete={() => setShowPreloader(false)} />}
 
-      {/* 1. Fullscreen Racing Hero */}
+      {/* 02. Fullscreen Racing Hero */}
       <HeroSection />
 
-      {/* 2. Racing Journey & Programs */}
-      <RacingJourneySection />
+      {/* 03. Passion / Ambition / Vision & Introduction */}
+      <IntroMissionSection />
 
-      {/* 3. The Driver: Ajith Kumar */}
+      {/* 04. Upcoming Race Highlight with Live Countdown */}
+      <UpcomingRaceHighlight />
+
+      {/* 05. Key Strengths (01, 02, 03 Pillars) */}
+      <KeyStrengthsSection />
+
+      {/* 06. Strategic Collaborations */}
+      <CollaborationsSection />
+
+      {/* 07. Drivers Showcase: Ajith Kumar & Cameron McLeod */}
       <DriverShowcase driver={data.driver} />
 
-      {/* 4. The Machine: AKR GT3-01 Spec */}
+      {/* 08. The Machine: AKR GT3-01 */}
       <MachineShowcase car={data.cars[0]} />
 
-      {/* 4.1. Interactive Engineering Blueprint */}
+      {/* 08.1. Interactive Engineering Blueprint */}
       <CarBlueprintSection />
 
-      {/* 5. Championships & Standings */}
+      {/* 09. Championships & Racing Series */}
       <ChampionshipsSection championships={data.championships} />
 
-      {/* 6. Race Calendar */}
+      {/* 10. Racing Journey & Programs */}
+      <RacingJourneySection />
+
+      {/* 11. Race Calendar & Schedule */}
       <RaceCalendarSection races={data.races} />
 
-      {/* 7. Latest Results */}
+      {/* 12. Latest Results */}
       <ResultsSection results={data.results} />
 
-      {/* 8. Live Racing / Virtual Pit Wall */}
+      {/* 13. Virtual Pit Wall & Live Simulator */}
       <LiveRaceSimulator />
 
-      {/* 9. Technology & Engineering */}
+      {/* 14. Technology & CFD Aerodynamics */}
       <TechnologySection />
 
-      {/* 10. Latest News */}
+      {/* 15. Official Merchandise & Apparel Store */}
+      <MerchandiseShowcase />
+
+      {/* 16. Latest News & Editorials */}
       <LatestNewsSection news={data.news} />
 
-      {/* 11. Magazine Stories */}
+      {/* 17. Magazine Feature Stories */}
       <MagazineStoriesSection stories={data.stories} />
 
-      {/* 12. Media Gallery */}
+      {/* 18. Media Gallery & 4K Vault */}
       <MediaShowcase media={data.media} />
 
-      {/* 13. The Team */}
+      {/* 19. The Team Squad & Management */}
       <TeamSection team={data.team} />
 
-      {/* 14. Experiences */}
+      {/* 20. Experiences */}
       <ExperiencesSection experiences={data.experiences} />
 
-      {/* 15. Partners */}
+      {/* 21. Strategic Partners */}
       <PartnersSection partners={data.partners} />
+
+      {/* 22. Become Part of the Race CTA */}
+      <BecomePartnerCTA />
+
+      {/* 23. Integrated Paddock Contact Form */}
+      <ContactSection />
     </div>
   );
 };
