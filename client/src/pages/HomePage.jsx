@@ -5,6 +5,7 @@ import { HeroSection } from '../components/home/HeroSection';
 import { RacingJourneySection } from '../components/home/RacingJourneySection';
 import { DriverShowcase } from '../components/home/DriverShowcase';
 import { MachineShowcase } from '../components/home/MachineShowcase';
+import { CarBlueprintSection } from '../components/home/CarBlueprintSection';
 import { ChampionshipsSection } from '../components/home/ChampionshipsSection';
 import { RaceCalendarSection } from '../components/home/RaceCalendarSection';
 import { ResultsSection } from '../components/home/ResultsSection';
@@ -108,6 +109,9 @@ export const HomePage = () => {
 
       {/* 4. The Machine: AKR GT3-01 Spec */}
       <MachineShowcase car={data.cars[0]} />
+
+      {/* 4.1. Interactive Engineering Blueprint */}
+      <CarBlueprintSection />
 
       {/* 5. Championships & Standings */}
       <ChampionshipsSection championships={data.championships} />

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, MapPin, Flag, ArrowRight, CheckCircle, Radio, Clock } from 'lucide-react';
+import { RaceCountdown } from '../telemetry/RaceCountdown';
 
 export const RaceCalendarSection = ({ races = [] }) => {
   const [filter, setFilter] = useState('ALL'); // 'ALL', 'UPCOMING', 'COMPLETED'
@@ -15,6 +16,14 @@ export const RaceCalendarSection = ({ races = [] }) => {
   return (
     <section className="py-24 px-6 sm:px-12 bg-racing-black border-b border-racing-border relative select-none">
       <div className="max-w-7xl mx-auto space-y-12">
+        {/* Live Race Countdown Ribbon */}
+        <RaceCountdown
+          targetDate="2026-05-18T10:00:00Z"
+          raceName="12H SPA-FRANCORCHAMPS"
+          circuit="CIRCUIT DE SPA-FRANCORCHAMPS, BELGIUM"
+          round="ROUND 03 &bull; 24H SERIES"
+        />
+
         {/* Header with Filters */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div className="space-y-3">
@@ -30,14 +39,14 @@ export const RaceCalendarSection = ({ races = [] }) => {
           </div>
 
           {/* Filter Pills */}
-          <div className="flex items-center gap-2 bg-racing-graphite p-1 border border-racing-border">
+          <div className="flex items-center gap-2 bg-racing-graphite p-1 border border-racing-border rounded">
             {['ALL', 'UPCOMING', 'COMPLETED'].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setFilter(tab)}
-                className={`px-4 py-2 text-xs font-mono font-bold tracking-wider uppercase transition-colors ${
+                className={`px-4 py-2 text-xs font-mono font-bold tracking-wider uppercase transition-colors rounded ${
                   filter === tab
-                    ? 'bg-racing-red text-white'
+                    ? 'bg-racing-red text-white shadow-[0_0_12px_rgba(217,4,41,0.5)]'
                     : 'text-racing-silver hover:text-white'
                 }`}
               >
@@ -56,9 +65,9 @@ export const RaceCalendarSection = ({ races = [] }) => {
             return (
               <div
                 key={race.id}
-                className={`p-6 bg-racing-graphite border transition-all duration-300 flex flex-col justify-between ${
+                className={`p-6 bg-racing-graphite border rounded-xl transition-all duration-300 flex flex-col justify-between ${
                   isLive
-                    ? 'border-racing-red shadow-[0_0_20px_rgba(217,4,41,0.2)]'
+                    ? 'border-racing-red shadow-[0_0_25px_rgba(217,4,41,0.25)]'
                     : 'border-racing-border hover:border-white/40'
                 }`}
               >
@@ -109,7 +118,7 @@ export const RaceCalendarSection = ({ races = [] }) => {
                   {isLive ? (
                     <Link
                       to="/live"
-                      className="w-full py-3 bg-racing-red hover:bg-racing-crimson text-white text-xs font-mono font-black uppercase tracking-widest flex items-center justify-center gap-2 transition-colors"
+                      className="w-full py-3 bg-racing-red hover:bg-racing-crimson text-white text-xs font-mono font-black uppercase tracking-widest flex items-center justify-center gap-2 transition-colors rounded shadow-[0_0_15px_rgba(217,4,41,0.4)]"
                     >
                       <Radio size={14} className="animate-pulse" />
                       <span>ENTER LIVE PIT WALL</span>
@@ -117,7 +126,7 @@ export const RaceCalendarSection = ({ races = [] }) => {
                   ) : (
                     <Link
                       to="/calendar"
-                      className="w-full py-2.5 bg-white/5 hover:bg-white/10 text-white text-xs font-mono uppercase tracking-widest flex items-center justify-center gap-2 border border-white/10 transition-colors"
+                      className="w-full py-2.5 bg-white/5 hover:bg-white/10 text-white text-xs font-mono uppercase tracking-widest flex items-center justify-center gap-2 border border-white/10 transition-colors rounded"
                     >
                       <span>CIRCUIT SPECIFICATIONS</span>
                       <ArrowRight size={13} />

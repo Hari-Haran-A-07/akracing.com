@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { api } from '../services/api';
 import { Calendar, MapPin, Radio, Clock, CheckCircle, ArrowRight, Filter } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { RaceCountdown } from '../components/telemetry/RaceCountdown';
 
 export const CalendarPage = () => {
   const [races, setRaces] = useState([]);
@@ -37,7 +38,7 @@ export const CalendarPage = () => {
       {/* Hero */}
       <section className="py-20 px-6 sm:px-12 border-b border-racing-border relative overflow-hidden">
         <div className="absolute inset-0 bg-carbon-pattern opacity-30" />
-        <div className="max-w-7xl mx-auto space-y-4 relative z-10">
+        <div className="max-w-7xl mx-auto space-y-6 relative z-10">
           <div className="flex items-center gap-3">
             <span className="w-8 h-[2px] bg-racing-red" />
             <span className="text-xs font-mono tracking-[0.3em] uppercase text-racing-silver">
@@ -50,6 +51,13 @@ export const CalendarPage = () => {
           <p className="text-xs sm:text-sm font-mono text-racing-silver uppercase tracking-widest max-w-2xl">
             2026 CAMPAIGN &bull; MIDDLE EAST TROPHY &bull; 24H SERIES EUROPEAN ENDURANCE
           </p>
+
+          <RaceCountdown
+            targetDate="2026-05-18T10:00:00Z"
+            raceName="12H SPA-FRANCORCHAMPS"
+            circuit="CIRCUIT DE SPA-FRANCORCHAMPS, BELGIUM"
+            round="ROUND 03 &bull; 24H SERIES"
+          />
         </div>
       </section>
 
