@@ -119,6 +119,7 @@ export const Footer = () => {
         <div className="space-y-4">
           <h4 className="font-mono text-[11px] font-bold tracking-widest text-racing-red uppercase">TECHNOLOGY</h4>
           <ul className="space-y-2.5 font-sans text-racing-silver">
+            <li><Link to="/engineering-suite" className="text-racing-red font-bold hover:underline">Polyglot OS (11 Languages)</Link></li>
             <li><Link to="/technology" className="hover:text-white transition-colors">Engineering Center</Link></li>
             <li><Link to="/technology#simulation" className="hover:text-white transition-colors">Motion Simulator</Link></li>
             <li><Link to="/technology#telemetry" className="hover:text-white transition-colors">Data Systems</Link></li>

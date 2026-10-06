@@ -62,6 +62,70 @@ export const TechnologyPage = () => {
         </div>
       </section>
 
+      {/* Polyglot Motorsport OS & Massive Automation Command Center */}
+      <section id="polyglot-os" className="py-24 px-6 sm:px-12 bg-black border-b border-racing-border relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-racing-red/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+          <div className="lg:col-span-7 space-y-6">
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping" />
+              <span className="text-xs font-mono text-cyan-400 font-bold uppercase tracking-widest">
+                11-LANGUAGE SYNCHRONIZED MICROSERVICES GRID
+              </span>
+            </div>
+            <h2 className="font-display text-3xl sm:text-5xl font-black uppercase text-white leading-tight">
+              AKR AUTONOMOUS <span className="text-racing-red">POLYGLOT OS</span>
+            </h2>
+            <p className="text-sm font-sans text-racing-silver leading-relaxed">
+              Powered by 11 synchronized languages executing in sub-millisecond precision:
+              <strong className="text-white"> TypeScript, JavaScript, Java, Go, C#, Python, Rust, Kotlin, PHP, Ruby, SQL</strong>.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 font-mono text-xs">
+              <div className="p-3 bg-white/5 border border-white/10 rounded">
+                <span className="text-racing-red font-bold">100,000 Pkts/s</span>
+                <p className="text-[10px] text-racing-silver">Go Goroutine Streamer</p>
+              </div>
+              <div className="p-3 bg-white/5 border border-white/10 rounded">
+                <span className="text-racing-red font-bold">14 μs Physics</span>
+                <p className="text-[10px] text-racing-silver">Rust WASM Dynamics</p>
+              </div>
+              <div className="p-3 bg-white/5 border border-white/10 rounded">
+                <span className="text-racing-red font-bold">AI Pit Stint</span>
+                <p className="text-[10px] text-racing-silver">Python Neural Model</p>
+              </div>
+            </div>
+            <Link
+              to="/engineering-suite"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-racing-red hover:bg-racing-crimson text-white font-display font-black text-xs uppercase tracking-widest transition-all shadow-[0_0_20px_rgba(217,4,41,0.4)]"
+            >
+              <span>LAUNCH POLYGLOT ENGINEERING SUITE</span>
+              <ArrowRight size={14} />
+            </Link>
+          </div>
+
+          <div className="lg:col-span-5 p-6 bg-racing-graphite/80 border border-white/10 rounded-lg space-y-3 font-mono text-xs">
+            <div className="flex items-center justify-between border-b border-white/10 pb-2 text-racing-silver text-[11px]">
+              <span className="text-white font-bold">AUTOMATION GRID STATUS</span>
+              <span className="text-emerald-400">11/11 ONLINE</span>
+            </div>
+            {[
+              { l: 'Go (Golang)', r: 'CAN Stream Broker', s: '124.5k pkts/s' },
+              { l: 'C# (.NET)', r: 'Motec M1 ECU Decoder', s: '0.8ms' },
+              { l: 'Rust (WASM)', r: 'Aero Downforce Matrix', s: '14 μs' },
+              { l: 'Python 3.13', r: 'AI Degradation Model', s: '4.8ms' },
+              { l: 'Java 17', r: 'FIA ASIL-D Homologation', s: '1.4ms' },
+              { l: 'SQL (Timeseries)', r: 'Microsector Lap Deltas', s: '0.9ms' }
+            ].map((item, idx) => (
+              <div key={idx} className="flex justify-between py-1 text-[11px]">
+                <span className="text-racing-red font-bold">{item.l}</span>
+                <span className="text-racing-silver">{item.r}</span>
+                <span className="text-emerald-400">{item.s}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Hardware-in-the-Loop Simulation */}
       <section id="simulation" className="py-24 px-6 sm:px-12 bg-racing-graphite">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

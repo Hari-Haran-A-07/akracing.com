@@ -63,10 +63,28 @@ export const MegaMenu = ({ category, onClose }) => {
         link: "/technology"
       },
       links: [
+        { name: "Polyglot Engineering Suite", path: "/engineering-suite", desc: "11-Language runtime & autonomous race pipeline" },
         { name: "Aerodynamics & CFD", path: "/technology#aero", desc: "Downforce balancing and vortex control" },
         { name: "Motec Live Telemetry", path: "/technology#telemetry", desc: "Tire temp, brake pressure & G-force data" },
         { name: "Driver-in-the-Loop Simulator", path: "/technology#simulation", desc: "6-DOF LiDAR circuit modeling" },
         { name: "Virtual Pit Wall", path: "/live", desc: "Real-time live race telemetry interface" }
+      ]
+    },
+    ENGINEERING: {
+      title: "AKR POLYGLOT MOTORSPORT OS",
+      description: "Massive automation & multi-language microservices architecture spanning 11 synchronized languages.",
+      featured: {
+        title: "Autonomous Race Pipeline",
+        tag: "10-STAGE AUTOMATION",
+        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop",
+        link: "/engineering-suite"
+      },
+      links: [
+        { name: "Massive Autonomous Pipeline", path: "/engineering-suite", desc: "One-click 10-stage race execution" },
+        { name: "11-Language Runtime IDE", path: "/engineering-suite", desc: "Python, Rust, Go, C#, Java, Kotlin, SQL & more" },
+        { name: "SQL Telemetry Query Console", path: "/engineering-suite", desc: "Timeseries laps, microsectors & window deltas" },
+        { name: "AI Race Engineer (Python)", path: "/engineering-suite", desc: "Neural tire degradation & pit stop optimizer" },
+        { name: "WASM Physics Matrix (Rust)", path: "/engineering-suite", desc: "Microsecond aero downforce & friction circle" }
       ]
     },
     EDITORIAL: {

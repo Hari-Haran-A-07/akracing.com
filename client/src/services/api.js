@@ -287,5 +287,46 @@ export const api = {
       headers: headers()
     });
     return res.json();
+  },
+
+  // Polyglot Microservices & Massive Automation Pipeline
+  getPolyglotStatus: async () => {
+    const res = await fetch(`${API_BASE}/polyglot/status`);
+    return res.json();
+  },
+  runPolyglotCode: async (language, code = null, params = {}) => {
+    const res = await fetch(`${API_BASE}/polyglot/run`, {
+      method: 'POST',
+      headers: headers(),
+      body: JSON.stringify({ language, code, params })
+    });
+    return res.json();
+  },
+  executeSqlQuery: async (query) => {
+    const res = await fetch(`${API_BASE}/polyglot/sql/query`, {
+      method: 'POST',
+      headers: headers(),
+      body: JSON.stringify({ query })
+    });
+    return res.json();
+  },
+  getSqlSchema: async () => {
+    const res = await fetch(`${API_BASE}/polyglot/sql/schema`);
+    return res.json();
+  },
+  predictAiTelemetry: async (mode = 'all') => {
+    const res = await fetch(`${API_BASE}/polyglot/ai/predict`, {
+      method: 'POST',
+      headers: headers(),
+      body: JSON.stringify({ mode })
+    });
+    return res.json();
+  },
+  runMassiveAutomationPipeline: async () => {
+    const res = await fetch(`${API_BASE}/polyglot/automation/pipeline`, {
+      method: 'POST',
+      headers: headers()
+    });
+    return res.json();
   }
 };

@@ -40,6 +40,7 @@ import { CheckoutPage } from './pages/CheckoutPage';
 import { ContactPage } from './pages/ContactPage';
 import { LoginPage } from './pages/LoginPage';
 import { AdminDashboard } from './pages/admin/AdminDashboard';
+import { EngineeringSuitePage } from './pages/EngineeringSuitePage';
 
 function AppContent() {
   useLenis();
@@ -71,6 +72,9 @@ function AppContent() {
           <Route path="/results" element={<ResultsPage />} />
           <Route path="/live" element={<LiveRacePage />} />
           <Route path="/technology" element={<TechnologyPage />} />
+          <Route path="/engineering-suite" element={<EngineeringSuitePage />} />
+          <Route path="/polyglot" element={<EngineeringSuitePage />} />
+          <Route path="/automation" element={<EngineeringSuitePage />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/:slug" element={<NewsDetailPage />} />
           <Route path="/stories" element={<StoriesPage />} />

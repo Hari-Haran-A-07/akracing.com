@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, ShoppingBag, Volume2, VolumeX, Menu, Shield, Radio, ChevronDown, User } from 'lucide-react';
+import { Search, ShoppingBag, Volume2, VolumeX, Menu, Shield, Radio, ChevronDown, User, Cpu } from 'lucide-react';
 import { MegaMenu } from './MegaMenu';
 import { MobileNav } from './MobileNav';
 import { SearchModal } from './SearchModal';
@@ -53,6 +53,7 @@ export const Navbar = () => {
     { key: 'DRIVER', label: 'DRIVER', path: '/driver' },
     { key: 'CARS', label: 'CARS', path: '/cars' },
     { key: 'TECH', label: 'TECHNOLOGY', path: '/technology' },
+    { key: 'ENGINEERING', label: 'POLYGLOT OS', path: '/engineering-suite' },
     { key: 'EDITORIAL', label: 'EDITORIAL', path: '/news' },
     { key: 'EXPERIENCE', label: 'EXPERIENCES', path: '/experiences' },
     { key: 'SHOP', label: 'SHOP', path: '/shop' },
@@ -87,6 +88,10 @@ export const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-6">
+            <Link to="/engineering-suite" className="text-cyan-400 hover:underline flex items-center gap-1 font-bold">
+              <Cpu size={12} className="animate-pulse" /> POLYGLOT OS (11-LANG)
+            </Link>
+            <span className="text-white/40">|</span>
             <Link to="/live" className="text-racing-red hover:underline flex items-center gap-1 font-bold">
               <Radio size={12} className="animate-pulse" /> VIRTUAL PIT WALL
             </Link>

@@ -25,6 +25,7 @@ import contactRoutes from './routes/contactRoutes.js';
 import newsletterRoutes from './routes/newsletterRoutes.js';
 import telemetryRoutes from './routes/telemetryRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
+import polyglotRoutes from './routes/polyglotRoutes.js';
 
 dotenv.config();
 
@@ -90,6 +91,7 @@ app.use('/api/contact', contactRoutes);
 app.use('/api/newsletter', newsletterRoutes);
 app.use('/api/telemetry', telemetryRoutes);
 app.use('/api/admin', adminRoutes);
+app.use('/api/polyglot', polyglotRoutes);
 
 // Error Handling
 app.use(errorHandler);

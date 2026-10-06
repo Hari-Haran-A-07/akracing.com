@@ -19,7 +19,8 @@ import {
   RefreshCw,
   LogOut,
   Zap,
-  Layers
+  Layers,
+  Cpu
 } from 'lucide-react';
 
 export const AdminDashboard = () => {
@@ -170,6 +171,7 @@ export const AdminDashboard = () => {
         <div className="flex flex-wrap items-center gap-2 border-b border-racing-border pb-2 font-mono text-xs font-bold uppercase">
           {[
             { id: 'overview', label: 'SYSTEM OVERVIEW', icon: Activity },
+            { id: 'polyglot', label: 'POLYGLOT OS (11-LANG)', icon: Cpu },
             { id: 'news', label: 'EDITORIAL NEWS', icon: FileText },
             { id: 'races', label: 'RACE CALENDAR', icon: Calendar },
             { id: 'cars', label: 'RACING FLEET', icon: Car },
@@ -245,6 +247,47 @@ export const AdminDashboard = () => {
                 </div>
               </div>
             )}
+          </div>
+        )}
+
+        {/* Tab: Polyglot OS & Automation */}
+        {activeTab === 'polyglot' && (
+          <div className="space-y-6">
+            <div className="p-6 bg-racing-graphite border border-racing-red/30 space-y-4">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-white/10 pb-4">
+                <div>
+                  <h3 className="font-display text-xl font-black uppercase text-white">
+                    AKR 11-LANGUAGE POLYGLOT GRID ORCHESTRATOR
+                  </h3>
+                  <p className="text-xs font-mono text-racing-silver mt-1">
+                    TypeScript • JavaScript • Java • Go • C# • Python • Rust • Kotlin • PHP • Ruby • SQL
+                  </p>
+                </div>
+                <Link
+                  to="/engineering-suite"
+                  className="px-5 py-2.5 bg-racing-red hover:bg-racing-crimson text-white font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2"
+                >
+                  <Cpu size={14} /> OPEN FULL ENGINEERING SUITE &rarr;
+                </Link>
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 font-mono text-xs">
+                {[
+                  { l: 'Go (Golang)', s: '100k pkts/s', st: 'ONLINE' },
+                  { l: 'Rust (WASM)', s: '14 μs Physics', st: 'ONLINE' },
+                  { l: 'Python 3.13', s: 'AI Degradation', st: 'ONLINE' },
+                  { l: 'C# (.NET 8)', s: 'CAN M1 Decoder', st: 'ONLINE' },
+                  { l: 'Java 17', s: 'FIA Homologation', st: 'ONLINE' },
+                  { l: 'SQL (Timeseries)', s: '0.9ms Queries', st: 'ONLINE' }
+                ].map((item, idx) => (
+                  <div key={idx} className="p-3 bg-black/40 border border-white/10 rounded">
+                    <span className="text-[10px] text-racing-silver">{item.l}</span>
+                    <div className="text-sm font-bold text-white mt-1">{item.s}</div>
+                    <span className="text-[9px] text-emerald-400 font-bold mt-1 inline-block">● {item.st}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         )}
 
