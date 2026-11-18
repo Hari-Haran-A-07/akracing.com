@@ -1,0 +1,48 @@
+﻿# Google Cloud Build CI/CD Automation Pipeline for AKR Motorsport Platform
+steps:
+  # 1. Install & Test
+  - name: 'node:20-alpine'
+    entrypoint: 'npm'
+    args: ['ci']
+    id: 'install-dependencies'
+
+  # 2. Build Client Production Bundle
+  - name: 'node:20-alpine'
+    entrypoint: 'npm'
+    args: ['run', 'build']
+    id: 'build-client'
+
+  # 3. Build Container Image for Google Cloud Run
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/\/akr-platform:\'
+      - '.'
+    id: 'docker-build'
+
+  # 4. Push Container Image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/\/akr-platform:\'
+    id: 'docker-push'
+
+  # 5. Deploy to Google Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'akr-motorsport-api'
+      - '--image=gcr.io/\/akr-platform:\'
+      - '--region=europe-west1'
+      - '--platform=managed'
+      - '--allow-unauthenticated'
+    id: 'deploy-cloud-run'
+
+images:
+  - 'gcr.io/\/akr-platform:\'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
