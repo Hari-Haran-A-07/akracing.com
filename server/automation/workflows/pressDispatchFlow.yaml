@@ -1,0 +1,42 @@
+﻿# Google Cloud Workflows definition: Post-Race Automated Press Dispatch
+# Aggregates driver quotes, race results, and telemetry records to generate press releases.
+main:
+  params: [raceSummary]
+  steps:
+    - gatherRaceData:
+        assign:
+          - circuit: \
+          - finishPosition: \
+          - fastestLap: \
+          - totalLaps: \
+    - invokeGeminiEditorial:
+        call: http.post
+        args:
+          url: "https://api.ajithkumarracing.com/api/automation/gemini/editorial"
+          body:
+            circuit: \
+            position: \
+            driver: "Ajith Kumar"
+            car: "AKR GT3-01 SPEC"
+        result: editorialDraft
+    - publishToNewsroom:
+        call: http.post
+        args:
+          url: "https://api.ajithkumarracing.com/api/news"
+          body:
+            title: \
+            content: \
+            category: "Race Report"
+            publishedAt: "AUTO_NOW"
+        result: publishedArticle
+    - dispatchSubscribersNewsletter:
+        call: http.post
+        args:
+          url: "https://api.ajithkumarracing.com/api/newsletter/broadcast"
+          body:
+            subject: \
+            articleId: \
+    - finishDispatch:
+        return:
+          status: "DISPATCHED"
+          articleTitle: \
