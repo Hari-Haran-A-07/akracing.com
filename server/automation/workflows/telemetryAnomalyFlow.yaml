@@ -1,0 +1,45 @@
+﻿# Google Cloud Workflows definition: High-Frequency Telemetry Anomaly Detection
+# Evaluates brake rotor heat, oil pressure drop, and G-force anomalies at 100Hz
+main:
+  params: [telemetryBatch]
+  steps:
+    - parseSensors:
+        assign:
+          - brakeTempFL: \
+          - brakeTempFR: \
+          - oilPressureBar: \
+          - lateralG: \
+    - verifyBrakeThermalBounds:
+        switch:
+          - condition: \
+            next: alertThermalWarning
+        next: verifyOilHydraulics
+    - alertThermalWarning:
+        call: http.post
+        args:
+          url: "https://api.ajithkumarracing.com/api/automation/safety-alert"
+          body:
+            sensor: "BRAKE_THERMAL"
+            value: \
+            threshold: 820
+            action: "Adjust brake bias rearward by 1.5% and engage cooling duct flaps"
+        next: verifyOilHydraulics
+    - verifyOilHydraulics:
+        switch:
+          - condition: \
+            next: alertOilDrop
+        next: finalizeSafe
+    - alertOilDrop:
+        call: http.post
+        args:
+          url: "https://api.ajithkumarracing.com/api/automation/safety-alert"
+          body:
+            sensor: "OIL_PRESSURE"
+            value: \
+            threshold: 3.2
+            action: "CRITICAL: Engine protection mode triggered. Reduce rev ceiling to 6,200 RPM"
+        next: return
+    - finalizeSafe:
+        return:
+          status: "NOMINAL"
+          healthScore: 99.4
