@@ -1,0 +1,50 @@
+﻿# Google Cloud Workflows definition: AKR Race Strategy Simulation Flow
+# Orchestrates real-time telemetry assessment, tire degradation calculation, and pit stop optimization.
+main:
+  params: [args]
+  steps:
+    - initSession:
+        assign:
+          - carId: \
+          - track: \
+          - currentLap: \
+          - ambientTemp: \
+    - fetchLiveTelemetry:
+        call: http.post
+        args:
+          url: "https://api.ajithkumarracing.com/api/telemetry/stream"
+          body:
+            carId: \
+        result: telemetryData
+    - evaluateTireWear:
+        call: http.post
+        args:
+          url: "https://api.ajithkumarracing.com/api/automation/tire-wear"
+          body:
+            telemetry: \
+            ambientTemp: \
+        result: tirePrediction
+    - computePitWindow:
+        switch:
+          - condition: \
+            next: triggerUrgentBoxCall
+        next: logStrategyOptimal
+    - triggerUrgentBoxCall:
+        call: http.post
+        args:
+          url: "https://api.ajithkumarracing.com/api/automation/paddock-alert"
+          body:
+            urgency: "HIGH"
+            message: "BOX THIS LAP: Critical tire degradation on Left-Rear compound."
+        result: alertResult
+        next: concludeWorkflow
+    - logStrategyOptimal:
+        assign:
+          - strategyDecision: "Maintain stint pace. Optimal pit window opens in 6 laps."
+        next: concludeWorkflow
+    - concludeWorkflow:
+        return:
+          status: "COMPLETED"
+          track: \
+          lap: \
+          recommendation: \
