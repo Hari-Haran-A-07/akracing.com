@@ -1,0 +1,15 @@
+﻿[submodule \"akr-telemetry-engine\"]
+	path = polyglot/telemetry-engine
+	url = https://github.com/Hari-Haran-A-07/akr-telemetry-engine.git
+[submodule \"akr-cfd-aerodynamics\"]
+	path = polyglot/cfd-aerodynamics
+	url = https://github.com/Hari-Haran-A-07/akr-cfd-aerodynamics.git
+[submodule \"akr-pitwall-mobile\"]
+	path = polyglot/pitwall-mobile
+	url = https://github.com/Hari-Haran-A-07/akr-pitwall-mobile.git
+[submodule \"akr-strategy-ml\"]
+	path = polyglot/strategy-ml
+	url = https://github.com/Hari-Haran-A-07/akr-strategy-ml.git
+[submodule \"akr-polyglot-mesh\"]
+	path = polyglot/polyglot-mesh
+	url = https://github.com/Hari-Haran-A-07/akr-polyglot-mesh.git

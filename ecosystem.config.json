@@ -1,0 +1,52 @@
+﻿{
+  "ecosystem": "Ajith Kumar Racing (AKR) Multi-Repository Platform",
+  "version": "2.4.0",
+  "coreRepository": "https://github.com/Hari-Haran-A-07/akracing.com",
+  "connectedRepositories": [
+    {
+      "id": "akr-telemetry-engine",
+      "name": "AKR Telemetry Engine",
+      "url": "https://github.com/Hari-Haran-A-07/akr-telemetry-engine",
+      "language": "Rust / C++",
+      "role": "High-throughput 100Hz CAN-bus transponder ingestion & WebSocket gateway",
+      "port": 50051,
+      "protocol": "gRPC / WebSocket"
+    },
+    {
+      "id": "akr-cfd-aerodynamics",
+      "name": "AKR CFD Aerodynamics Solver",
+      "url": "https://github.com/Hari-Haran-A-07/akr-cfd-aerodynamics",
+      "language": "Python / WebAssembly",
+      "role": "Digital wind tunnel Navier-Stokes downforce and ground-effect airflow solver",
+      "port": 8081,
+      "protocol": "REST / Wasm"
+    },
+    {
+      "id": "akr-pitwall-mobile",
+      "name": "AKR Pit Wall Companion App",
+      "url": "https://github.com/Hari-Haran-A-07/akr-pitwall-mobile",
+      "language": "React Native / TypeScript",
+      "role": "Paddock crew wireless telemetry monitor, tire temperature scanner & pit radio client",
+      "port": 8082,
+      "protocol": "SSE / HTTPS"
+    },
+    {
+      "id": "akr-strategy-ml",
+      "name": "AKR Race Strategy Neural Engine",
+      "url": "https://github.com/Hari-Haran-A-07/akr-strategy-ml",
+      "language": "Python / PyTorch",
+      "role": "Deep reinforcement learning model for pit stop windows & tire wear forecasting",
+      "port": 8083,
+      "protocol": "gRPC / REST"
+    },
+    {
+      "id": "akr-polyglot-mesh",
+      "name": "AKR Polyglot Service Mesh",
+      "url": "https://github.com/Hari-Haran-A-07/akr-polyglot-mesh",
+      "language": "Go / Envoy",
+      "role": "Inter-service RPC communication bus, mTLS security gateway & circuit breaker",
+      "port": 9090,
+      "protocol": "gRPC / Envoy"
+    }
+  ]
+}
