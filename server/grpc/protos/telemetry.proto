@@ -1,0 +1,34 @@
+﻿syntax = \"proto3\";
+
+package akr.telemetry.mesh;
+
+service TelemetryMeshService {
+  rpc StreamTelemetry (TelemetryStreamRequest) returns (stream TelemetryFrame);
+  rpc QueryCarState (CarStateRequest) returns (CarStateResponse);
+}
+
+message TelemetryStreamRequest {
+  string car_id = 1;
+  int32 sample_rate_hz = 2;
+}
+
+message TelemetryFrame {
+  int64 timestamp_ns = 1;
+  double speed_kmh = 2;
+  int32 rpm = 3;
+  int32 gear = 4;
+  double throttle_pct = 5;
+  double brake_pct = 6;
+  double lateral_g = 7;
+}
+
+message CarStateRequest {
+  string car_id = 1;
+}
+
+message CarStateResponse {
+  string car_id = 1;
+  string status = 2;
+  double battery_volts = 3;
+  double oil_pressure_bar = 4;
+}
