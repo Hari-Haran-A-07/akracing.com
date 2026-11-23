@@ -1,0 +1,35 @@
+﻿name: AKR Multi-Repository Matrix CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-ecosystem:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service:
+          - akr-telemetry-engine
+          - akr-cfd-aerodynamics
+          - akr-pitwall-mobile
+          - akr-strategy-ml
+          - akr-polyglot-mesh
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validate Service Registry
+        run: |
+          node -e "
+            const cfg = require('./ecosystem.config.json');
+            const target = cfg.connectedRepositories.find(r => r.id === '${{ matrix.service }}');
+            if (!target) throw new Error('Service ${{ matrix.service }} missing from registry');
+            console.log('✓ Validated microservice: ' + target.name);
+          "
+      - name: Execute Core Verification Tests
+        run: node server/tests/ecosystemTest.js
