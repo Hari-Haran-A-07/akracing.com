@@ -1,22 +1,22 @@
 {
-  "name": "ajith-kumar-racing",
-  "version": "1.0.0",
-  "description": "Ajith Kumar Racing (AKR) - Premium International Motorsport Platform",
-  "private": true,
-  "type": "module",
-  "workspaces": [
-    "server",
-    "client"
-  ],
+  "name": "akracing-ecosystem",
+  "version": "3.2.0-championship",
+  "description": "Ajith Kumar Racing Official Enterprise Platform & Polyglot Motorsport OS",
+  "main": "server/server.js",
   "scripts": {
-    "dev": "concurrently \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
-    "client": "npm run dev --workspace=client",
-    "server": "npm run dev --workspace=server",
-    "build": "npm run build --workspace=client",
-    "seed": "npm run seed --workspace=server",
-    "start": "npm run start --workspace=server"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/server.js",
+    "client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "test": "node server/tests/tireGrainingTest.js && node server/tests/crossoverPredictorTest.js && node server/tests/trackLimitsTest.js && node server/tests/boostCompensatorTest.js"
   },
-  "devDependencies": {
-    "concurrently": "^8.2.2"
-  }
+  "keywords": [
+    "ajith-kumar-racing",
+    "motorsport",
+    "telemetry",
+    "gt3",
+    "polyglot"
+  ],
+  "author": "Ajith Kumar Racing Team",
+  "license": "MIT"
 }
